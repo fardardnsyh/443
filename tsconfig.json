@@ -1,0 +1,40 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@root/*": [
+				"./*"
+			],
+			"@components/*": [
+				"src/components/*"
+			],
+			"@layouts/*": [
+				"src/layouts/*"
+			],
+			"@assets/*": [
+				"src/assets/*"
+			],
+			"@functions/*": [
+				"src/functions/*"
+			],
+			"@interfaces/*": [
+				"src/interfaces/*"
+			],
+			"@ui/*": [
+				"src/ui/*"
+			],
+			"@data/*": [
+				"src/data/*"
+			],
+			"@remote/*": [
+				"_remote/*"
+			],
+		},
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true
+	}
+}

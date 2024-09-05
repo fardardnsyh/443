@@ -1,0 +1,14 @@
+---
+import PostPreview from '@components/PostPreview.astro'
+
+const { posts } = Astro.props
+---
+
+{
+  posts.map((postData: any) => (
+    <>
+      <PostPreview post={postData.props.post} />
+      <br />
+    </>
+  ))
+}

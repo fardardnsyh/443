@@ -1,0 +1,33 @@
+---
+import PageFooter from '@components/PageFooter.astro'
+import PageHead from '@components/PageHead.astro'
+import PageHeader from '@components/PageHeader.astro'
+import type { PageProps } from '@interfaces/PageProps'
+import NavBtn from './NavBtn.astro'
+
+const {
+	title = '',
+	description = '',
+	featuredImage = '',
+	keywords = ''
+} = Astro.props as PageProps
+---
+
+<!doctype html>
+<html lang="en">
+	<PageHead
+		title={title}
+		description={description}
+		keywords={keywords}
+		featuredImage={featuredImage}>
+		<slot name="head" />
+	</PageHead>
+	<body>
+		<PageHeader />
+		<main>
+			<slot />
+		</main>
+		<NavBtn />
+		<PageFooter />
+	</body>
+</html>
